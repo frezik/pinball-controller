@@ -1,4 +1,4 @@
-update=4/4/2018 3:38:44 PM
+update=Wed 11 Apr 2018 03:37:28 PM CDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,4 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=teensy_library/teensy
+LibName30=/home/tmurray/proj/pinball/kicad_lib/teensy_library/teensy
