@@ -1,2 +1,4 @@
 teensy.pretty
 teensy_library
+*.bak
+*.kicad_pcb-bak

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name pinball-rescue)(type Legacy)(uri ${KIPRJMOD}/pinball-rescue.lib)(options "")(descr ""))
+  (lib (name teensy)(type Legacy)(uri /home/tmurray/proj/pinball/kicad_lib/teensy_library/teensy.lib)(options "")(descr ""))
+)
