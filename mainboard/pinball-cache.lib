@@ -1,17 +1,37 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic_Conn_01x12
+# Connector_Generic_Conn_01x02
 #
-DEF Connector_Generic_Conn_01x12 J 0 40 Y N 1 F N
-F0 "J" 0 600 50 H V C CNN
-F1 "Connector_Generic_Conn_01x12" 0 -700 50 H V C CNN
+DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  Connector*:*_1x??_*
 $ENDFPLIST
 DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic_Conn_01x14
+#
+DEF Connector_Generic_Conn_01x14 J 0 40 Y N 1 F N
+F0 "J" 0 700 50 H V C CNN
+F1 "Connector_Generic_Conn_01x14" 0 -800 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -695 0 -705 1 1 6 N
 S -50 -595 0 -605 1 1 6 N
 S -50 -495 0 -505 1 1 6 N
 S -50 -395 0 -405 1 1 6 N
@@ -24,19 +44,39 @@ S -50 205 0 195 1 1 6 N
 S -50 305 0 295 1 1 6 N
 S -50 405 0 395 1 1 6 N
 S -50 505 0 495 1 1 6 N
-S -50 550 50 -650 1 1 10 f
-X Pin_1 1 -200 500 150 R 50 50 1 1 P
-X Pin_10 10 -200 -400 150 R 50 50 1 1 P
-X Pin_11 11 -200 -500 150 R 50 50 1 1 P
-X Pin_12 12 -200 -600 150 R 50 50 1 1 P
-X Pin_2 2 -200 400 150 R 50 50 1 1 P
-X Pin_3 3 -200 300 150 R 50 50 1 1 P
-X Pin_4 4 -200 200 150 R 50 50 1 1 P
-X Pin_5 5 -200 100 150 R 50 50 1 1 P
-X Pin_6 6 -200 0 150 R 50 50 1 1 P
-X Pin_7 7 -200 -100 150 R 50 50 1 1 P
-X Pin_8 8 -200 -200 150 R 50 50 1 1 P
-X Pin_9 9 -200 -300 150 R 50 50 1 1 P
+S -50 605 0 595 1 1 6 N
+S -50 650 50 -750 1 1 10 f
+X Pin_1 1 -200 600 150 R 50 50 1 1 P
+X Pin_10 10 -200 -300 150 R 50 50 1 1 P
+X Pin_11 11 -200 -400 150 R 50 50 1 1 P
+X Pin_12 12 -200 -500 150 R 50 50 1 1 P
+X Pin_13 13 -200 -600 150 R 50 50 1 1 P
+X Pin_14 14 -200 -700 150 R 50 50 1 1 P
+X Pin_2 2 -200 500 150 R 50 50 1 1 P
+X Pin_3 3 -200 400 150 R 50 50 1 1 P
+X Pin_4 4 -200 300 150 R 50 50 1 1 P
+X Pin_5 5 -200 200 150 R 50 50 1 1 P
+X Pin_6 6 -200 100 150 R 50 50 1 1 P
+X Pin_7 7 -200 0 150 R 50 50 1 1 P
+X Pin_8 8 -200 -100 150 R 50 50 1 1 P
+X Pin_9 9 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R
+#
+DEF Device_R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -172,28 +212,6 @@ DRAW
 S -50 5 10 -5 0 1 0 N
 S -50 50 50 -50 0 1 0 N
 X P1 1 -200 0 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# pinball-rescue_CONN_01X02
-#
-DEF pinball-rescue_CONN_01X02 P 0 40 Y N 1 F N
-F0 "P" 0 150 50 H V C CNN
-F1 "pinball-rescue_CONN_01X02" 100 0 50 V V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-$FPLIST
- Pin_Header_Straight_1X02
- Pin_Header_Angled_1X02
- Socket_Strip_Straight_1X02
- Socket_Strip_Angled_1X02
-$ENDFPLIST
-DRAW
-S -50 -45 10 -55 0 1 0 N
-S -50 55 10 45 0 1 0 N
-S -50 100 50 -100 0 1 0 N
-X P1 1 -200 50 150 R 50 50 1 1 P
-X P2 2 -200 -50 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -404,43 +422,6 @@ X S 3 100 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# pinball-rescue_Q_NPN_BEC
-#
-DEF pinball-rescue_Q_NPN_BEC Q 0 0 Y N 1 F N
-F0 "Q" 300 50 50 H V R CNN
-F1 "pinball-rescue_Q_NPN_BEC" 600 -50 50 H V R CNN
-F2 "" 200 100 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
-DRAW
-C 50 0 111 0 1 10 N
-P 2 0 1 0 25 25 100 100 N
-P 3 0 1 0 25 -25 100 -100 100 -100 N
-P 3 0 1 20 25 75 25 -75 25 -75 N
-P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
-X B 1 -200 0 225 R 50 50 1 1 I
-X E 2 100 -200 100 U 50 50 1 1 P
-X C 3 100 200 100 D 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# pinball-rescue_R
-#
-DEF pinball-rescue_R R 0 0 N Y 1 F N
-F0 "R" 80 0 50 V V C CNN
-F1 "pinball-rescue_R" 0 0 50 V V C CNN
-F2 "" -70 0 50 V V C CNN
-F3 "" 0 0 50 H V C CNN
-$FPLIST
- R_*
- Resistor_*
-$ENDFPLIST
-DRAW
-S -40 -100 40 100 0 1 10 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # pinball-rescue_TEST_1P
 #
 DEF pinball-rescue_TEST_1P W 0 30 N N 1 F N
@@ -454,24 +435,11 @@ X 1 1 0 0 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power_GND
+# pinball-rescue_Teensy3.5-teensy
 #
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# teensy_Teensy3.5
-#
-DEF teensy_Teensy3.5 U 0 40 Y Y 1 F N
+DEF pinball-rescue_Teensy3.5-teensy U 0 40 Y Y 1 F N
 F0 "U" 0 2300 60 H V C CNN
-F1 "teensy_Teensy3.5" 0 -2300 60 H V C CNN
+F1 "pinball-rescue_Teensy3.5-teensy" 0 -2300 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -562,6 +530,19 @@ X 55 84 1000 1900 200 L 50 50 1 1 B
 X 56 85 1000 2000 200 L 50 50 1 1 B
 X 57 86 1000 2100 200 L 50 50 1 1 B
 X 7_RX3_miso0_scl0 9 -1000 1300 200 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
