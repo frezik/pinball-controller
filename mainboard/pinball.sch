@@ -125,22 +125,6 @@ F 3 "" H 1300 7100 50  0000 C CNN
 	1    1300 7100
 	1    0    0    -1  
 $EndComp
-Text GLabel 1750 2500 0    60   Input ~ 0
-CS1
-Text GLabel 2050 2200 0    60   Input ~ 0
-CS0
-Wire Wire Line
-	2050 2200 2200 2200
-Wire Wire Line
-	2200 2500 1750 2500
-Text GLabel 4650 5600 2    60   Input ~ 0
-CS
-Wire Wire Line
-	4650 5600 4200 5600
-Text GLabel 1750 2700 0    60   Input ~ 0
-CS5
-Wire Wire Line
-	2200 2700 1750 2700
 $Comp
 L pinball-rescue:CONN_01X04 P5
 U 1 1 5AD01801
@@ -566,10 +550,8 @@ Wire Wire Line
 	2100 7150 2100 7250
 Wire Wire Line
 	2400 7150 2400 7250
-Text GLabel 4350 5500 2    60   Input ~ 0
+Text GLabel 1700 4700 0    60   Input ~ 0
 NEOPIXEL
-Wire Wire Line
-	4350 5500 4200 5500
 Wire Wire Line
 	2050 6000 2200 6000
 $Comp
@@ -826,7 +808,6 @@ NoConn ~ 2200 5700
 NoConn ~ 2200 5600
 NoConn ~ 2200 5500
 NoConn ~ 2200 4200
-NoConn ~ 2200 4300
 NoConn ~ 2200 4400
 NoConn ~ 2200 4500
 NoConn ~ 2200 4600
@@ -1154,7 +1135,7 @@ Text GLabel 2100 2000 0    50   Input ~ 0
 SWITCH_LOW2
 Text GLabel 1750 1900 0    50   Input ~ 0
 SWITCH_LOW1
-Text GLabel 1700 4700 0    50   Input ~ 0
+Text GLabel 1750 2700 0    50   Input ~ 0
 SWITCH_LOW9
 Text GLabel 2050 4800 0    50   Input ~ 0
 SWITCH_LOW14
@@ -1294,4 +1275,105 @@ Wire Wire Line
 	5050 1300 5050 1400
 Wire Wire Line
 	5050 1700 5050 1800
+$Comp
+L Connector:Conn_01x03_Male J3
+U 1 1 5C5D4D4A
+P 4700 6950
+F 0 "J3" V 4853 6763 50  0000 R CNN
+F 1 "Conn_01x03_Male" V 4762 6763 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4700 6950 50  0001 C CNN
+F 3 "~" H 4700 6950 50  0001 C CNN
+	1    4700 6950
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3350 6450 0    60   Input ~ 0
+NEOPIXEL
+$Comp
+L power:GND #PWR0106
+U 1 1 5C5D507A
+P 5050 6650
+F 0 "#PWR0106" H 5050 6400 50  0001 C CNN
+F 1 "GND" H 5055 6477 50  0000 C CNN
+F 2 "" H 5050 6650 50  0001 C CNN
+F 3 "" H 5050 6650 50  0001 C CNN
+	1    5050 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 6750 4800 6650
+Wire Wire Line
+	4800 6650 5050 6650
+Text GLabel 4700 6650 1    60   Input ~ 0
++5V
+Wire Wire Line
+	4700 6650 4700 6750
+Text GLabel 2050 4300 0    50   Input ~ 0
++3.3V
+Wire Wire Line
+	2050 4300 2200 4300
+$Comp
+L crumpschemes:74AHC125 U3
+U 1 1 5C6093D9
+P 3950 6950
+F 0 "U3" H 3925 7737 60  0000 C CNN
+F 1 "74AHC125" H 3925 7631 60  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm" H 3950 6950 60  0001 C CNN
+F 3 "" H 3950 6950 60  0001 C CNN
+F 4 "1727-6305-1-ND" H 3950 6950 50  0001 C CNN "Digikey #"
+	1    3950 6950
+	1    0    0    -1  
+$EndComp
+Text GLabel 3350 7600 0    60   Input ~ 0
++5V
+$Comp
+L power:GND #PWR0107
+U 1 1 5C609626
+P 4500 7600
+F 0 "#PWR0107" H 4500 7350 50  0001 C CNN
+F 1 "GND" H 4505 7427 50  0000 C CNN
+F 2 "" H 4500 7600 50  0001 C CNN
+F 3 "" H 4500 7600 50  0001 C CNN
+	1    4500 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5C609753
+P 3350 6600
+F 0 "#PWR0108" H 3350 6350 50  0001 C CNN
+F 1 "GND" H 3355 6427 50  0000 C CNN
+F 2 "" H 3350 6600 50  0001 C CNN
+F 3 "" H 3350 6600 50  0001 C CNN
+	1    3350 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 6550 3350 6550
+Wire Wire Line
+	3350 6550 3350 6600
+Wire Wire Line
+	3350 6450 3450 6450
+Wire Wire Line
+	3350 7600 3450 7600
+NoConn ~ 3450 6750
+NoConn ~ 3450 6850
+NoConn ~ 3450 7050
+NoConn ~ 3450 7150
+NoConn ~ 3450 7350
+NoConn ~ 3450 7450
+NoConn ~ 4400 7350
+NoConn ~ 4400 7050
+NoConn ~ 4400 6750
+Wire Wire Line
+	4400 7600 4500 7600
+Wire Wire Line
+	4600 6750 4600 6450
+Wire Wire Line
+	4600 6450 4400 6450
+NoConn ~ 4200 5500
+NoConn ~ 4200 5600
+NoConn ~ 2200 2500
+Wire Wire Line
+	2200 2700 1750 2700
+NoConn ~ 2200 2200
 $EndSCHEMATC

@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name teensy_library)(type KiCad)(uri C:/cygwin64/home/tmurray/proj/pinball/teensy_library)(options "")(descr ""))
   (lib (name teensy)(type KiCad)(uri C:/cygwin64/home/tmurray/proj/pinball/teensy.pretty)(options "")(descr ""))
+  (lib (name CrumpPrints)(type KiCad)(uri C:/cygwin64/home/tmurray/proj/pinball/kicad_lib/CrumpPrints.pretty)(options "")(descr ""))
 )
