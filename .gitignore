@@ -2,3 +2,5 @@ teensy.pretty
 teensy_library
 *.bak
 *.kicad_pcb-bak
+kicad_lib/CrumpPrints.pretty
+kicad_lib/CrumpSchemes
