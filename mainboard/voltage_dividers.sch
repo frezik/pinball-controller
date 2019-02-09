@@ -1582,4 +1582,6 @@ Text GLabel 9500 4500 2    60   Input ~ 0
 SCORE_ZERO_IN4
 Text GLabel 9350 4850 0    60   Input ~ 0
 SCORE_ZERO4
+Text Notes 6300 1050 0    50   ~ 0
+If we need to handle 43-50V, use 50kOhm and 5000kOhm resistors. 1/16W is fine
 $EndSCHEMATC

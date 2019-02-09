@@ -38,45 +38,6 @@ F 3 "" H 1900 1800 50  0001 C CNN
 $EndComp
 Text GLabel 4350 5100 2    60   Input ~ 0
 +5V
-$Comp
-L pinball-rescue:C C1
-U 1 1 5AC53D1A
-P 1150 1150
-F 0 "C1" H 1175 1250 50  0000 L CNN
-F 1 "10uF" H 1175 1050 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 1188 1000 50  0001 C CNN
-F 3 "" H 1150 1150 50  0001 C CNN
-F 4 "490-3298-1-ND" H 1150 1150 60  0001 C CNN "Digikey #"
-	1    1150 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L pinball-rescue:C C2
-U 1 1 5AC53E32
-P 2050 1150
-F 0 "C2" H 2075 1250 50  0000 L CNN
-F 1 "10uF" H 2075 1050 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2088 1000 50  0001 C CNN
-F 3 "" H 2050 1150 50  0001 C CNN
-F 4 "490-3298-1-ND" H 2050 1150 60  0001 C CNN "Digikey #"
-	1    2050 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5AC53E69
-P 1600 1350
-F 0 "#PWR02" H 1600 1100 50  0001 C CNN
-F 1 "GND" H 1600 1200 50  0000 C CNN
-F 2 "" H 1600 1350 50  0001 C CNN
-F 3 "" H 1600 1350 50  0001 C CNN
-	1    1600 1350
-	1    0    0    -1  
-$EndComp
-Text GLabel 2200 850  2    60   Input ~ 0
-+5V
-Text GLabel 950  850  0    60   Input ~ 0
-Vin
 Text GLabel 4350 5900 2    60   Input ~ 0
 SDA
 Text GLabel 4650 5800 2    60   Input ~ 0
@@ -133,6 +94,7 @@ F 0 "P5" H 2900 1050 50  0000 C CNN
 F 1 "PWR" V 3000 800 50  0000 C CNN
 F 2 "Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-4pol" H 2900 800 50  0001 C CNN
 F 3 "" H 2900 800 50  0000 C CNN
+F 4 "A25422-ND " H 2900 800 50  0001 C CNN "Digikey #"
 	1    2900 800 
 	0    -1   -1   0   
 $EndComp
@@ -160,7 +122,6 @@ F 3 "" H 2950 1100 50  0000 C CNN
 	1    2950 1100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3050 1000
 Wire Wire Line
 	2750 1000 2750 1200
 Wire Wire Line
@@ -1088,25 +1049,6 @@ Text GLabel 7750 5700 1    50   Input ~ 0
 SCORE_OUT3A
 Text GLabel 6350 5650 1    50   Input ~ 0
 SCORE_OUT4A
-Wire Wire Line
-	950  850  1150 850 
-Wire Wire Line
-	1150 1000 1150 850 
-Connection ~ 1150 850 
-Wire Wire Line
-	2050 1000 2050 850 
-Connection ~ 2050 850 
-Wire Wire Line
-	2050 850  2200 850 
-Wire Wire Line
-	2050 1300 1600 1300
-Wire Wire Line
-	1600 1150 1600 1300
-Connection ~ 1600 1300
-Wire Wire Line
-	1600 1300 1150 1300
-Wire Wire Line
-	1600 1300 1600 1350
 Text GLabel 1700 3900 0    50   Input ~ 0
 SWITCH_LOW16
 Text GLabel 2050 3800 0    50   Input ~ 0
@@ -1135,7 +1077,7 @@ Text GLabel 2100 2000 0    50   Input ~ 0
 SWITCH_LOW2
 Text GLabel 1750 1900 0    50   Input ~ 0
 SWITCH_LOW1
-Text GLabel 2100 2200 0    50   Input ~ 0
+Text GLabel 1750 2700 0    50   Input ~ 0
 SWITCH_LOW9
 Text GLabel 2050 4800 0    50   Input ~ 0
 SWITCH_LOW14
@@ -1157,22 +1099,6 @@ Text GLabel 2050 6000 0    50   Input ~ 0
 SWITCH_LOW24
 NoConn ~ 4200 5400
 NoConn ~ 2200 3200
-$Comp
-L Regulator_Linear:L7805 U1
-U 1 1 5C8325C2
-P 1600 850
-F 0 "U1" H 1600 1092 50  0000 C CNN
-F 1 "R-78B5.0-2.0" H 1600 1001 50  0000 C CNN
-F 2 "Power_Integrations:TO-220" H 1625 700 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 1600 800 50  0001 C CNN
-F 4 "945-3042-ND" H 1600 850 50  0001 C CNN "Digikey #"
-	1    1600 850 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 850  2050 850 
-Wire Wire Line
-	1150 850  1300 850 
 NoConn ~ 4200 5700
 Wire Wire Line
 	2200 5400 2050 5400
@@ -1370,10 +1296,14 @@ Wire Wire Line
 	4600 6750 4600 6450
 Wire Wire Line
 	4600 6450 4400 6450
-Wire Wire Line
-	2200 2200 2100 2200
 NoConn ~ 4200 5500
 NoConn ~ 4200 5600
-NoConn ~ 2200 2700
 NoConn ~ 2200 2500
+Wire Wire Line
+	2200 2700 1750 2700
+NoConn ~ 2200 2200
+Text GLabel 3050 1200 3    50   Input ~ 0
++5V
+Wire Wire Line
+	3050 1000 3050 1200
 $EndSCHEMATC
